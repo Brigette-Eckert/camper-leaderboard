@@ -1,0 +1,98 @@
+@import "vars.scss";
+
+html {
+  background-color: $chocolate;
+  color: white;
+}
+
+#board {
+  margin: auto;
+  overflow: hidden;
+  max-width: 1000px;
+  background-color: $green;
+}
+
+#board-title {
+  background-color: $teal;
+  max-width: 1000px;
+  height: 60px;
+  margin: auto;
+  margin-top: 50px;
+  font-family: 'Caesar Dressing', cursive;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#board-labels{
+  background-color: $dark-gold;
+  position: relative;
+  max-width: 1000px;
+  height: 50px;
+  margin: auto;
+  font-family: 'Changa', sans-serif;
+  button {
+    font-family: 'Changa', sans-serif;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    &.btn-active {
+      color: yellow;
+    }
+  }
+  .points {
+    padding: 10px;
+  }
+}
+
+.camper-row {
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  height: 50px;
+  position: relative;
+  
+  &:nth-child(2n) {
+    background-color: $light-green;
+  }
+}
+
+.column {
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  float: left;
+  height: 50px;
+  &.points {
+    width: 60px;
+    height: 30px;
+    padding: 10px;
+    position: absolute;
+    &.all-time {
+      right: 0;
+    }
+    &.recent {
+      right: 80px;
+    }
+
+  }
+  &.rank {
+    width: 50px;
+    height: 30px;
+    padding: 10px;
+  }
+  &.username {
+    height: 30px;
+    padding: 10px;
+  }
+  &.user {
+    height: 30px;
+    padding: 10px 0;
+  }
+}
